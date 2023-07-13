@@ -10,7 +10,7 @@ import (
 func PaymentRoutes() *mux.Router {
 	router := mux.NewRouter();
 
-	router.HandleFunc("/api/stripe/create-checkout-session", controllers.CreateCheckoutSession).Methods("POST");
+	router.HandleFunc("/api/stripe/perform-payment", controllers.PaymentHandler).Methods("POST");
 
-	return router
+	return router;
 }
