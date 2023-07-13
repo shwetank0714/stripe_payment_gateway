@@ -23,8 +23,7 @@ func PaymentHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer r.Body.Close()
-	// Set your Stripe secret key
-	stripe.Key = "your_stripe_secret_key"
+	
 
 	// Create a card token param
 	tokenParams := helpers.GetCardTokenParam(paymentInputDetail)
